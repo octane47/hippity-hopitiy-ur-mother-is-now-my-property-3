@@ -1,5 +1,6 @@
 import string
 
+
 alphabets = string.ascii_lowercase + string.ascii_lowercase
 
 sentence = list (input("enter your text : \n").lower())
@@ -22,7 +23,8 @@ while not end_program:
               new_letter = alphabets.index(sentence[i]) + shift_number
               sentence[i] = alphabets[new_letter]
       #convert the list back to a string
-      print('',join(map(str,sentence)))
+      
+      print('', join(map(str ,sentence)))
       end_program = True
-  elif what_to_do == 'decrypt':
+   
     
