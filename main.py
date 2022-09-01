@@ -1,37 +1,43 @@
 import string
+#hey just change the e to something to that can mean encyption and paste then change it to something that can mean decyption and then woah wow you did it 
+def en_alphabet_de_alphabet(question):
+    vaild = False
+    while not vaild:
+        response = input(question).lower()
 
-alphabets = string.ascii_lowercase + string.ascii_lowercase
+        if response == "en_alphabet" or response == "encrypt":
+            response = "yes"
+            return response
 
-sentence = list (input("enter your text : \n").lower())
+        if response == "no" or response == "n":
+            response = "no"
+            return response
 
-what_to_do = input("enter encrypt to encrypt, decrypt to cecrypt, exit to exit the program \n'").lower()
+        else:
+            print("please answer yes / no")
 
-shift_number = int(input('enter you sift number from 1 to 25: \n'))
+plain_text = "hello world"
+shift = 3
 
-end_program = False
+
+en_alphabet = string.ascii_lowercase
+shifted = en_alphabet[shift:] + en_alphabet[:shift]
+table = str.maketrans(en_alphabet, shifted)
+
+encrypted = plain_text.translate(table)
+
+print(encrypted)
+import string
+
+plain_text = "hello world"
+shift = -3
 
 
-while not end_program:
-  #search through enter text
-  if what_to_do == 'encrypt':
-      for i in range(len(sentence)):
-          #get the position of each character within the sentence
-          if sentence[i] =='':
-              sentence[i] = ''
-          else:
-              new_letter = alphabets.index(sentence[i]) + shift_number
-              sentence[i] = alphabets[new_letter]
-      #convert the list back to a string
-      print('',join(map(str,sentence)))
-      end_program = True
-  elif what_to_do == 'decrypt':
-      for i in range(len(sentence)):
-          #get the position of each character within the sentence
-          if sentence[i] =='':
-              sentence[i] = ''
-          else:
-              new_letter = alphabets.index(sentence[i]) + shift_number
-              sentence[i] = alphabets[new_letter]
-      #convert the list back to a string
-      print('',join(map(str,sentence)))
-      end_program = True
+de_alphabet = string.ascii_lowercase
+shifted = de_alphabet[shift:] + de_alphabet[:shift]
+table = str.maketrans(de_alphabet, shifted)
+
+encrypted = plain_text.translate(table)
+
+print(encrypted)
+
