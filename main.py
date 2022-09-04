@@ -1,5 +1,6 @@
 import string
-#hey just change the e to something to that can mean encyption and paste then change it to something that can mean decyption and then woah wow you did it 
+#hey just change the e to something to that can mean encyption and paste then change it to something that can mean decyption and then woah wow you did it
+# also add the '" part next class"'
 print(" this is your friendly encryption and decryption program")
 print()
 answer = input("what would you like to do?, encrypt or decrypt?")
@@ -19,15 +20,15 @@ if answer = encrypt:
   print(" )
 
 
+elif answer:
+  en_reply = input(" enter word or phrase you with to encrypt")
+  shift = -3
+  de_alphabet = string.ascii_lowercase
+  shifted = de_alphabet[shift:] + de_alphabet[:shift]
+  table = str.maketrans(de_alphabet, shifted)
+  
+  encrypted = plain_text.translate(table)
+  
+  print(encrypted)
 
-shift = -3
-
-
-de_alphabet = string.ascii_lowercase
-shifted = de_alphabet[shift:] + de_alphabet[:shift]
-table = str.maketrans(de_alphabet, shifted)
-
-encrypted = plain_text.translate(table)
-
-print(encrypted)
 
